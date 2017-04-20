@@ -7,8 +7,8 @@
   "jsnext": "lib/esm/index.js",
   "types": "lib/esm/index.d.ts",
   "scripts": {
-    "precommit": "npm run lint",
-    "prepush": "npm run lint",
+    "precommit": "npm run lint && npm test",
+    "prepush": "npm run lint && npm test",
     "start": "NODE_ENV=development rollup --config rollup.config.js -w",
     "clean:umd": "rimraf ./lib/umd",
     "clean:esm": "rimraf ./lib/esm",
@@ -19,7 +19,8 @@
     "build:cjs": "tsc",
     "build:all": "npm run build:umd && npm run build:esm && npm run build:cjs",
     "build": "npm run clean:all && npm run build:all",
-    "lint": "tslint --project ./tsconfig.json --type-check"
+    "lint": "tslint --project ./tsconfig.json --type-check",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -32,8 +33,10 @@
   },
   "homepage": "https://github.com/epiqueras/getsy#readme",
   "devDependencies": {
+    "@types/jest": "^19.2.2",
     "@types/jquery": "^2.0.41",
     "husky": "^0.13.3",
+    "jest": "^19.0.2",
     "rimraf": "^2.6.1",
     "rollup": "^0.41.6",
     "rollup-plugin-commonjs": "^8.0.2",
@@ -44,11 +47,25 @@
     "rollup-plugin-serve": "^0.3.0",
     "rollup-plugin-typescript": "^0.8.1",
     "rollup-watch": "^3.2.2",
+    "ts-jest": "^19.0.10",
     "tslint": "<5",
     "tslint-microsoft-contrib": "^4.0.1",
-    "typescript": "^2.2.2"
+    "typescript": "^2.2.2",
+    "xmlhttprequest": "^1.8.0"
   },
   "dependencies": {
     "jquery": "^3.2.1"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ]
   }
 }

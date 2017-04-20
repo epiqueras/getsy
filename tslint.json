@@ -33,7 +33,7 @@
     "completed-docs": [
       false
     ],
-    "curly": true,
+    "curly": false,
     "cyclomatic-complexity": [
       false
     ],
@@ -85,7 +85,7 @@
     "missing-jsdoc": true,
     "missing-optional-annotation": true,
     "mocha-avoid-only": true,
-    "mocha-no-side-effect-code": true,
+    "mocha-no-side-effect-code": false,
     "mocha-unneeded-done": true,
     "new-parens": true,
     "no-angle-bracket-type-assertion": false,
