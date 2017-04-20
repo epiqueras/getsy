@@ -2,6 +2,14 @@
   "name": "getsy",
   "version": "0.6.0",
   "description": "A simple browser/client-side web scraper.",
+  "keywords": [
+    "browser",
+    "client-side",
+    "web-scraper",
+    "client",
+    "web",
+    "scraper"
+  ],
   "browser": "lib/umd/getsy.js",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
