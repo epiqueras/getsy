@@ -4,6 +4,6 @@
 import jquery from 'jquery'
 
 const div: HTMLDivElement = document.createElement('div')
-div.textContent = 'Hello World'
+div.textContent = 'Test'
 document.body.appendChild(div)
-console.log(jquery('div').text())
+alert(jquery('div').text())
