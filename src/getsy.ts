@@ -2,7 +2,7 @@
  * @export
  * @class Getsy
  */
-import * as jquery from 'jquery'
+import jquery from 'jquery'
 import { addTrailingSlash } from './utils'
 
 const defaultProxy: string = 'https://crossorigin.me/'
