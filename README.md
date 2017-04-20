@@ -19,7 +19,7 @@ parameters:
 
 The function returns a promise that resolves to a Getsy object on success and rejects if it was unable to load the requested page.
 
-Getsy objects have a method `getMe` for scraping the resource's contents. This method is just a wrapper over the jQuery function so you can chain other jQuery methods on it.
+Getsy objects have a method `getMe` for scraping the resource's contents. This method is just a wrapper over the jQuery function so you can chain other jQuery methods on it. If you need to use the raw data you can access it's `content` property.
 
 ### Example (Promises):
 
