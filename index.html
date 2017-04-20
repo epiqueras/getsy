@@ -8,5 +8,18 @@
 <body>
   <div>Hello World</div>
   <script src="lib/umd/getsy.js"></script>
+  <script>
+    getsy('https://en.wikipedia.org/wiki/"Hello,_World!"_program').then(myGetsy => {
+      console.log(myGetsy.getMe('#firstHeading').text())
+    })
+
+    // async function testing(): Promise<{}> {
+    //   const myGetsy: getsyInst = await getsy('https://en.wikipedia.org/wiki/"Hello,_World!"_program')
+    //   console.log(myGetsy.getMe('#firstHeading').text())
+    //   return null
+    // }
+
+    // testing()
+  </script>
 </body>
 </html>

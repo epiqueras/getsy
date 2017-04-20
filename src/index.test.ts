@@ -1,7 +1,8 @@
 /**
  * Tests for main exports.
  */
-import getsy, { Getsy } from './index' // tslint:disable-line import-name
+import getsy from './index' // tslint:disable-line import-name
+import { Getsy } from './getsy'
 
 declare global {
   namespace jest {
