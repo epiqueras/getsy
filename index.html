@@ -4,13 +4,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Getsy</title>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.2/codemirror.min.js" integrity="sha256-faqXWPrUTyqXWeySd1Ri6Zre47Ul9H3bLPqUPLn10+M=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.2/codemirror.min.css" integrity="sha256-GGAcbnLrt4/AHq5cP2+2UWetYcNsQNjNMqSRStBoPLQ=" crossorigin="anonymous" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.2/mode/javascript/javascript.min.js" integrity="sha256-N/yi99LnUpZtDxkbxqZN8IdK8NuEbll3ljpVc5LOUcg=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.2/addon/edit/closebrackets.min.js" integrity="sha256-BC9sZPM4CU0pDhcAvVjwsspJLT0XBdE90lvGxpPAhOk=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.2/theme/material.min.css" integrity="sha256-jXFCrxspfEjGOrMfdka1mlL95uey6ISo9XwuhbtsDJw=" crossorigin="anonymous" />
-
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
 </head>
@@ -28,37 +23,10 @@
     <div id="text-container"></div>
     <button onclick="runCode()">getMe</button>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.2/codemirror.min.js" integrity="sha256-faqXWPrUTyqXWeySd1Ri6Zre47Ul9H3bLPqUPLn10+M=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.2/mode/javascript/javascript.min.js" integrity="sha256-N/yi99LnUpZtDxkbxqZN8IdK8NuEbll3ljpVc5LOUcg=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.2/addon/edit/closebrackets.min.js" integrity="sha256-BC9sZPM4CU0pDhcAvVjwsspJLT0XBdE90lvGxpPAhOk=" crossorigin="anonymous"></script>
   <script src="https://github.com/epiqueras/getsy/releases/download/v0.6.1/getsy.js"></script>
-  <script>
-    const promiseCode = 
-`getsy('https://en.wikipedia.org/wiki/"Hello,_World!"_program')
-.then(myGetsy => {
-  alert(myGetsy.getMe('#firstHeading').text())
-})
-
-// Click getMe and wait for it.
-// Go to the repo to see the docs and download/install.
-`;
-
-    var myCodeMirror = CodeMirror(document.getElementById('text-container'), {
-      value: promiseCode,
-      mode:  "javascript",
-      theme: 'material',
-      lineNumbers: true,
-      autoCloseBrackets: true,
-    });
-
-    function runCode() {
-      eval(myCodeMirror.getValue());
-    }
-
-    // const asyncCode = `async function testing(): Promise<{}> {
-    //   const myGetsy: getsyInst = await getsy('https://en.wikipedia.org/wiki/"Hello,_World!"_program')
-    //   console.log(myGetsy.getMe('#firstHeading').text())
-    //   return null
-    // }
-
-    // testing()`
-  </script>
+  <script src="index.js"></script>
 </body>
 </html>
