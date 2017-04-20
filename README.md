@@ -1,5 +1,7 @@
 # Getsy
 > A simple browser/client-side web scraper.
+> Try it out in a REPL:
+[https://epiqueras.github.io/getsy/](https://epiqueras.github.io/getsy/)
 
 <br />
 
