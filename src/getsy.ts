@@ -9,8 +9,9 @@ const defaultProxy: string = 'https://crossorigin.me/'
 
 export class Getsy {
   content: string
+  readonly corsProxy: string
 
-  constructor(public readonly url: string, onLoad: (err: Error, obj?: Getsy) => void, readonly corsProxy?: string) {
+  constructor(public readonly url: string, onLoad: (err: Error, obj?: Getsy) => void, corsProxy?: string) {
     if (!corsProxy) this.corsProxy = defaultProxy
     else this.corsProxy = corsProxy
     jquery.get(addTrailingSlash(this.corsProxy) + url, 'html').done((data: string) => {
@@ -24,11 +25,11 @@ export class Getsy {
   }
 }
 
-export default function getsy(url: string): PromiseLike<{}> {
+export default function getsy(url: string, corsProxy?: string): Promise<{}> {
   return new Promise((resolve: (value?: {} | PromiseLike<{}>) => void, reject: (value?: {} | PromiseLike<{}>) => void) => {
     new Getsy(url, (err: Error, obj: Getsy) => { // tslint:disable-line no-unused-new
       if (err) reject(err)
       resolve(obj)
-    })
+    }, corsProxy)
   })
 }
