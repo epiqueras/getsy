@@ -5,7 +5,7 @@
 
 ## Installation options:
 + Run `npm install --save getsy` or `yarn add getsy`
-+ Download the umd build and link it with a script tag
++ Download the umd build and link it using a script tag
 
 <br />
 
