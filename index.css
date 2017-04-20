@@ -1,0 +1,58 @@
+html, body {
+  background: teal;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  font-weight: 900;
+  font-size: 80px;
+  width: 75%;
+  text-align: center;
+  color: white;
+}
+
+.title {
+  text-shadow:
+    -5px 5px 0px #00e6e6,
+    -10px 10px 0px #01cccc,
+    -15px 15px 0px #00bdbd;
+}
+
+#text-container {
+  background: #263238;
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  margin: 40px 0 30px;
+  font-size: 16px;
+  text-align: left;
+}
+
+.CodeMirror {
+  border-radius: 10px;
+}
+
+button {
+  font-family: 'Roboto', sans-serif;
+  padding: 10px;
+  font-weight: 900;
+  border-radius: 5px;
+  font-size: 18px;
+  background: #00bdbd;;
+  color: white;
+  border-color: white;
+  outline: none;
+  cursor: pointer;
+  border: 3px outset;
+}
+
+button:active {
+  border: 3px inset;
+}
