@@ -26,7 +26,7 @@ export class Getsy {
 }
 
 export default function getsy(url: string, corsProxy?: string): Promise<Getsy> {
-  return new Promise<Getsy>((resolve, reject) => {
+  return new Promise<Getsy>((resolve: (value: Getsy) => void, reject: (error: Error) => void) => {
     new Getsy(url, (err: Error, obj: Getsy) => { // tslint:disable-line no-unused-new
       if (err) reject(err)
       resolve(obj)
