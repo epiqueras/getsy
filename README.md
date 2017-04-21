@@ -3,6 +3,8 @@
 > Try it out in a REPL:
 [https://epiqueras.github.io/getsy/](https://epiqueras.github.io/getsy/)
 
+>> TODOS: Currently working on support for websites with pagination and/or infinite scroll.
+
 <br />
 
 ## Installation options:
