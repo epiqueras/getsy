@@ -1,2 +1,8 @@
+# IDE
+.alm
+
+# NPM
 /node_modules/
+
+# Build
 /lib/
