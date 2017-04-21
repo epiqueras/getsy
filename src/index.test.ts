@@ -13,10 +13,10 @@ declare global {
 }
 
 describe('Main exports:', () => {
-  test('Exports default export getsy', () => {
+  test('Exports default export getsy.', () => {
     return expect(getsy).toEqual(expect.anything())
   })
-  test('Exports named export Getsy', () => {
+  test('Exports named export Getsy.', () => {
     return expect(Getsy).toEqual(expect.anything())
   })
 })

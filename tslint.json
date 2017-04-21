@@ -130,11 +130,7 @@
     "no-for-in-array": false,
     "no-function-constructor-with-string-args": true,
     "no-function-expression": true,
-    "no-http-string": [
-      true,
-      "http://www.example.com/?.*",
-      "http://www.examples.com/?.*"
-    ],
+    "no-http-string": false,
     "no-increment-decrement": true,
     "no-inferrable-types": [
       false
@@ -148,7 +144,7 @@
     "no-magic-numbers": false,
     "no-mergeable-namespace": false,
     "no-missing-visibility-modifiers": false,
-    "no-multiline-string": true,
+    "no-multiline-string": false,
     "no-multiple-var-decl": true,
     "no-namespace": false,
     "no-null-keyword": false,
