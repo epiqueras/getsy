@@ -1,2 +1,9 @@
+# IDEs
+.vscode
+.alm
+
+# NPM
 /node_modules/
+
+# Build
 /lib/
