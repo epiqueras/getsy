@@ -11,7 +11,7 @@
 
 ## Installation options:
 + Run `npm install --save getsy` or `yarn add getsy`
-+ Download the [umd](https://github.com/epiqueras/getsy/releases/download/v0.6.1/getsy.js) build and link it using a script tag
++ Download the [umd](https://github.com/epiqueras/getsy/releases/download/v0.9.0/getsy.js) build and link it using a script tag
 
 <br />
 
