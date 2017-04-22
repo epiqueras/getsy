@@ -65,19 +65,18 @@ testing()
 ### Here's how you might use it with a website that has infinite scrolling:
 
 ```js
-getsy('http://scrollmagic.io/examples/advanced/infinite_scrolling.html', { iframe: true }).then(myGetsy => {
-  // myGetsy.showFrame() // Show the frame?
+async function infiniteScrape() {
+  myGetsy = await getsy('http://scrollmagic.io/examples/advanced/infinite_scrolling.html', { iframe: true })
+  
+  console.log(`${myGetsy.getMe('.box1').length} boxes.`)
+  
+  const { succesfulTimes, totalRetries } = await myGetsy.scroll(10)
+  
+  console.log(`New content loaded ${succesfulTimes} times with ${totalRetries} total retries.`)
+  console.log(`${myGetsy.getMe('.box1').length} boxes.`) // More content!
+}
 
-  console.log(myGetsy.getMe('.box1').length + ' boxes.')
-
-  myGetsy.scroll(10).then(({ succesfulTimes, totalRetries }) => {
-    console.log('New content loaded ' + succesfulTimes + ' times with ' + totalRetries + ' total retries.')
-
-    console.log(myGetsy.getMe('.box1').length + ' boxes.') // More content!
-    
-    myGetsy.hideFrame()
-  })
-})
+infiniteScrape()
 ```
 
 <br />
