@@ -3,7 +3,9 @@
 > Try it out in a REPL:
 [https://epiqueras.github.io/getsy/](https://epiqueras.github.io/getsy/)
 
->> TODOS: Currently working on support for websites with pagination and/or infinite scroll.
+>> TODOS:
+>> + [x] Support for websites with infinite scroll.
+>> + [ ] Support for websites with click pagination.
 
 <br />
 
