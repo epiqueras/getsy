@@ -1,15 +1,26 @@
-const promiseCode =
-`getsy('https://en.wikipedia.org/wiki/"Hello,_World!"_program')
+const infiniteScrollExample =
+`// Infinite Scroll Example
+getsy('http://scrollmagic.io/examples/advanced/infinite_scrolling.html', { iframe: true })
 .then(myGetsy => {
-  alert(myGetsy.getMe('#firstHeading').text())
+  // myGetsy.showFrame() // Show the frame?
+
+  console.log(myGetsy.getMe('.box1').length + ' boxes.')
+
+  myGetsy.scroll(10).then(({ succesfulTimes, totalRetries }) => {
+    console.log('New content loaded ' + succesfulTimes + ' times with ' + totalRetries + ' total retries.')
+
+    console.log(myGetsy.getMe('.box1').length + ' boxes.') // More content!
+    
+    myGetsy.hideFrame()
+  })
 })
 
-// Click getMe and wait for it.
+// Click getMe and open your browser console.
 // Go to the repo to see the docs and download/install.
-`;
+`
 
 var myCodeMirror = CodeMirror(document.getElementById('text-container'), {
-  value: promiseCode,
+  value: infiniteScrollExample,
   mode:  "javascript",
   theme: 'material',
   lineNumbers: true,
@@ -19,11 +30,3 @@ var myCodeMirror = CodeMirror(document.getElementById('text-container'), {
 function runCode() {
   eval(myCodeMirror.getValue());
 }
-
-// const asyncCode = `async function testing(): Promise<{}> {
-//   const myGetsy: getsyInst = await getsy('https://en.wikipedia.org/wiki/"Hello,_World!"_program')
-//   console.log(myGetsy.getMe('#firstHeading').text())
-//   return null
-// }
-
-// testing()`

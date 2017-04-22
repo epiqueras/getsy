@@ -13,7 +13,7 @@ html, body {
 .container {
   font-weight: 900;
   font-size: 80px;
-  width: 75%;
+  width: 80%;
   text-align: center;
   color: white;
 }
@@ -28,14 +28,19 @@ html, body {
 #text-container {
   background: #263238;
   width: 100%;
-  height: 300px;
+  height: 325px;
   border-radius: 10px;
   margin: 40px 0 30px;
-  font-size: 16px;
+  font-size: 14px;
   text-align: left;
 }
 
-.CodeMirror {
+::-webkit-scrollbar {
+  display: none;
+}
+
+.CodeMirror,
+.CodeMirror-scroll {
   border-radius: 10px;
 }
 

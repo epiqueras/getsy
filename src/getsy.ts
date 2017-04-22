@@ -20,8 +20,8 @@ const defaults: options = {
 }
 
 export class Getsy {
-  content: string
   readonly corsProxy: string
+  content: string
   iframe: HTMLIFrameElement
   iframeDoc: Document
 
@@ -110,12 +110,14 @@ export class Getsy {
   }
 
   hideFrame(): void {
+    if (!this.iframe) throw Error('No iframe to hide.')
     this.iframe.style.opacity = '0'
     this.iframe.style.zIndex = '-1000'
     this.iframe.style.pointerEvents = 'none'
   }
 
   showFrame(): void {
+    if (!this.iframe) throw Error('No iframe to show.')
     this.iframe.style.opacity = '1'
     this.iframe.style.zIndex = '1000'
     this.iframe.style.pointerEvents = 'auto'
