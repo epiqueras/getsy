@@ -4,7 +4,6 @@
 import getsy from './index' // tslint:disable-line import-name
 import { Getsy } from './getsy'
 
-
 describe('Main exports:', () => {
   test('Exports default export getsy.', () => {
     expect(getsy).toEqual(expect.anything())
