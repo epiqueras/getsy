@@ -10,6 +10,10 @@
   version "2.0.41"
   resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-2.0.41.tgz#b87ba051011f99edbe586d8f97282e7786e01a6d"
 
+"@types/node@^7.0.13":
+  version "7.0.13"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.13.tgz#1b0a53fe9ef9c3a5d061b126cc9b915bca43a3f5"
+
 abab@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.3.tgz#b81de5f7274ec4e756d797cd834f303642724e5d"
