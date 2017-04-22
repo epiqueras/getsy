@@ -2,8 +2,9 @@
  * @export
  * @class Getsy
  */
-import jquery from 'jquery'
+import * as jqueryProxy from 'jquery'
 import { addTrailingSlash, resolveRelativeURLs } from './utils'
+const jquery: JQueryStatic = (<any>jqueryProxy).default || jqueryProxy
 
 export type options = {
   corsProxy?: string
