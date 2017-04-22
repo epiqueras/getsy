@@ -1,7 +1,7 @@
 # Getsy
 > A simple browser/client-side web scraper.
 > Try it out in a REPL:
-[https://epiqueras.github.io/getsy/](https://epiqueras.github.io/getsy/)
+[http://www.getgetsy.com](http://www.getgetsy.com)
 
 >> TODOS:
 >> + [x] Support for websites with infinite scroll.
