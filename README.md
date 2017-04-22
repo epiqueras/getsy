@@ -80,6 +80,7 @@ getsy('http://scrollmagic.io/examples/advanced/infinite_scrolling.html', { ifram
 })
 ```
 
+<br />
 
 ## The Getsy Object:
 The Getsy object has the following properties and methods:
@@ -102,6 +103,7 @@ The Getsy object has the following properties and methods:
 
 + `showFrame(): void`: Shows the iframe if applicable.
 
+<br />
 
 ## CorsProxy:
 This library uses a corsProxy to get by the CORS Origin issue.
