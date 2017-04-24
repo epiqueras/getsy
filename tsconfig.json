@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
     "moduleResolution": "node",
-    "module": "commonjs",
+    "module": "es6",
     "target": "es5",
     "lib": ["es2017", "dom"],
-    "outDir": "lib/cjs",
+    "outDir": "lib/esm",
     "sourceMap": true,
     "declaration": true,
     "pretty": true,
